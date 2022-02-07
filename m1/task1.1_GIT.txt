@@ -1,0 +1,23 @@
+git reflog
+953472c (HEAD -> main, origin/main, origin/develop, origin/HEAD, develop) HEAD@{0}: merge develop: Fast-forward
+248a44b HEAD@{1}: checkout: moving from develop to main
+953472c (HEAD -> main, origin/main, origin/develop, origin/HEAD, develop) HEAD@{2}: commit (merge): fix bug merge
+ff45ad3 (origin/images, images) HEAD@{3}: checkout: moving from ff45ad3cd95540e58336d335e413e2eaf4f99a58 to develop
+ff45ad3 (origin/images, images) HEAD@{4}: checkout: moving from c2508cbbb1030e55c1560d5eef8f2029126b5370 to ff45ad3cd95540e58336d335e413e2eaf4f99a58
+c2508cb HEAD@{5}: checkout: moving from develop to c2508cbbb1030e55c1560d5eef8f2029126b5370
+ff45ad3 (origin/images, images) HEAD@{6}: checkout: moving from c2508cbbb1030e55c1560d5eef8f2029126b5370 to develop
+c2508cb HEAD@{7}: checkout: moving from develop to c2508cbbb1030e55c1560d5eef8f2029126b5370
+ff45ad3 (origin/images, images) HEAD@{8}: reset: moving to HEAD
+ff45ad3 (origin/images, images) HEAD@{9}: merge images: Fast-forward
+6454900 HEAD@{10}: checkout: moving from styles to develop
+25bed09 (origin/styles, styles) HEAD@{11}: commit: modify index.html
+48bff9b HEAD@{12}: commit: add styles.css file
+6454900 HEAD@{13}: checkout: moving from develop to styles
+6454900 HEAD@{14}: checkout: moving from images to develop
+ff45ad3 (origin/images, images) HEAD@{15}: commit: change index.html
+c2508cb HEAD@{16}: commit: add some images to dir images
+6454900 HEAD@{17}: checkout: moving from develop to images
+6454900 HEAD@{18}: commit: create index.html file
+248a44b HEAD@{19}: checkout: moving from main to develop
+248a44b HEAD@{20}: commit: create readme.txt file
+2259cb3 HEAD@{21}: clone: from github.com:terra144481/DevOps_online_Odessa_2022Q1Q2.git
