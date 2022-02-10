@@ -1,3 +1,5 @@
+**task2.1**
+
 > Most popular hypervisors for infrastructure virtualization:
 - VMware vSphere Hypervisor (VMware vSphere Hypervisor is a free bare-metal hypervisor that virtualizes servers so you can consolidate your applications on less hardware. Use - big company, for administrator, region - North America, Free Trial Unavailable)
 - Hyper-V (Microsoft Hyper-V Server 2012 is a stand-alone product providing a simplified, reliable, cost-effective and optimized virtualization solution. Free Trial Unavailable)
