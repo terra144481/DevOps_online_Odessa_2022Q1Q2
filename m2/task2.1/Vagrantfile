@@ -1,0 +1,27 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# sum_config
+Vagrant.configure(2) do |config|
+  config.vm.box = "ubuntu/bionic64"
+  config.vm.box_check_update = false
+
+# config for vm1
+  config.vm.define "vm1" do |vm1|
+      vm1.vm.network  "public_network", ip: "192.168.1.160"
+      vm1.vm.hostname = "vm1"  
+      vm1.vm.provider "virtualbox" do |vb|
+         vb.memory = "512"
+      end
+  end
+
+# config for vm2  
+ config.vm.define "vm2" do |vm2|
+     vm2.vm.network "public_network", ip: "192.168.1.161"
+     vm2.vm.hostname = "vm2"  
+     vm2.vm.provider "virtualbox" do |vb|
+         vb.memory = "512"
+     end
+ end
+
+end
