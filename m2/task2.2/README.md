@@ -1,8 +1,8 @@
 **task2.2**
 1. Create ec2 instance.
-
+![create EC2](https://github.com/terra144481/DevOps_online_Odessa_2022Q1Q2/blob/7fadec6a9d6bc12399b686008d476ba0f83fe513/m2/task2.2/images/1_create%20EC2.png)
 2. Create a snapshot of instance.
-
+![create snapshot](https://github.com/terra144481/DevOps_online_Odessa_2022Q1Q2/blob/7fadec6a9d6bc12399b686008d476ba0f83fe513/m2/task2.2/images/2_create%20snapshot.png)
 3. Create and attach a Disk_D (EBS). Mount Disk_D and create file "newfile".
 ```
 [ec2-user@ip-172-31-92-116 ~]$ sudo blkid /dev/xvdf
@@ -29,8 +29,9 @@ disk
 [ec2-user@ip-172-31-92-116 ~]$ cat ./disk/newfile
 hello world
 ```
-
+![create volume and attached to ec2](https://github.com/terra144481/DevOps_online_Odessa_2022Q1Q2/blob/7fadec6a9d6bc12399b686008d476ba0f83fe513/m2/task2.2/images/3_create%20volume%20and%20attached%20to%20ec2.png)
 4. Launch the second instance from backup.
+![create second ins](https://github.com/terra144481/DevOps_online_Odessa_2022Q1Q2/blob/7fadec6a9d6bc12399b686008d476ba0f83fe513/m2/task2.2/images/5%20create%20beckup%20ec2.png)
 
 5. Detach Disk_D from the 1st instance and attach disk_D to the new instance.  
 ```
@@ -46,14 +47,16 @@ xvdf    ext4         b269188c-376d-4594-91fd-bdd2744e104b
 lost+found  newfile
 ```
 
-6. register the domain name lovkin.pp.ua,change DNS A to static IP AWS WP (http://18.235.43.255/).
+6. register the domain name lovkin.pp.ua,change DNS A to static IP AWS WP (18.235.43.25).
+![stat_ip](https://github.com/terra144481/DevOps_online_Odessa_2022Q1Q2/blob/7fadec6a9d6bc12399b686008d476ba0f83fe513/m2/task2.2/images/7_wp_aws_stat_ip.png)  
+![nic.ua](https://github.com/terra144481/DevOps_online_Odessa_2022Q1Q2/blob/7fadec6a9d6bc12399b686008d476ba0f83fe513/m2/task2.2/images/7_nic.ua_dnstoip.png)  
+![lovkin.pp.ua](https://github.com/terra144481/DevOps_online_Odessa_2022Q1Q2/blob/7fadec6a9d6bc12399b686008d476ba0f83fe513/m2/task2.2/images/7_lovkinppua.png)  
 
 7. Configure a WordPress instance with Amazon Lightsail
+![Lightsail](https://github.com/terra144481/DevOps_online_Odessa_2022Q1Q2/blob/7fadec6a9d6bc12399b686008d476ba0f83fe513/m2/task2.2/images/8_wordpress_%20Lightsail.png)
+8. Create bucket and upload file. ![bucket_upl](https://github.com/terra144481/DevOps_online_Odessa_2022Q1Q2/blob/7fadec6a9d6bc12399b686008d476ba0f83fe513/m2/task2.2/images/9_bucket_upload%20file.png)
 
-8. Create bucket and upload file.
-
-10. Create a user AWS IAM, configure CLI AWS and upload any files to S3
-
+9. Create a user AWS IAM, configure CLI AWS and upload any files to S3
 ```
 C:\Users\Home>aws configure
 AWS Access Key ID [None]: AKIAVVR75ZTXHG4YR***
@@ -76,7 +79,7 @@ delete: s3://mybucket144481144481/20220210_101324.jpg
 C:\Users\Home>aws s3 rb s3://mybucket144481144481 --force
 remove_bucket: mybucket144481144481
 ```
-11. Create a cluster at Docker Containers on Amazon Elastic Container, and run the online demo application.  
+10. Create a cluster at Docker Containers on Amazon Elastic Container, and run the online demo application.  
 command history ec2 machine:
 ```
     1  sudo yum update
@@ -141,9 +144,14 @@ f8988637651f: Pushed
 1dc52a6b4de8: Pushed
 latest: digest: sha256:d14781f711c81e012b68e0066e130d919ba16927efae6e128e7ea53d088e3960 size: 1155
 ```
+![docker_image](https://github.com/terra144481/DevOps_online_Odessa_2022Q1Q2/blob/7fadec6a9d6bc12399b686008d476ba0f83fe513/m2/task2.2/images/11_ECR_docker_image.jpg)
+![docker_cont](https://github.com/terra144481/DevOps_online_Odessa_2022Q1Q2/blob/7fadec6a9d6bc12399b686008d476ba0f83fe513/m2/task2.2/images/11_docker_cont.png)
 
-12. Create a serverless "Hello, World!" with AWS Lambda.  
+11. Create a serverless "Hello, World!" with AWS Lambda.  
+![Lambda](https://github.com/terra144481/DevOps_online_Odessa_2022Q1Q2/blob/7fadec6a9d6bc12399b686008d476ba0f83fe513/m2/task2.2/images/12%20-%20hello-world-python%20-%20Lambda.png)
 
-13. Сreate a static website on Amazon S3.  
+12. Сreate a static website on Amazon S3.  
 http://devopsonline2022.s3-website-us-east-1.amazonaws.com/  
 http://lovkin.pp.ua/  
+![imag](https://github.com/terra144481/DevOps_online_Odessa_2022Q1Q2/blob/7fadec6a9d6bc12399b686008d476ba0f83fe513/m2/task2.2/images/13_S3%20bucket_static_site.png)
+![img](https://github.com/terra144481/DevOps_online_Odessa_2022Q1Q2/blob/7fadec6a9d6bc12399b686008d476ba0f83fe513/m2/task2.2/images/13_my_site.png)
