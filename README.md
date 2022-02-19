@@ -8,5 +8,6 @@
 ## [task2.2](https://github.com/terra144481/DevOps_online_Odessa_2022Q1Q2/tree/main/m2/task2.2)
 ***
 ## module 3
+## [task3.1](https://github.com/terra144481/DevOps_online_Odessa_2022Q1Q2/tree/main/m3/task3.1)
 ***
 ## module 4

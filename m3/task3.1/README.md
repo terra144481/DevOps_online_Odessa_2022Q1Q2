@@ -1,7 +1,7 @@
 **task3.1**  
-**1. Create 3 LANs:** 
+**1. Create 3 LANs:**
 
-[image 1](https://github.com/terra144481/DevOps_online_Odessa_2022Q1Q2/blob/751317483b92f6762c4f64bf42f7be743395a5b8/m3/task3.1/images/main3.1.png)  
+![image 1](https://github.com/terra144481/DevOps_online_Odessa_2022Q1Q2/blob/751317483b92f6762c4f64bf42f7be743395a5b8/m3/task3.1/images/main3.1.png)  
 
 - LAN "Enterprise" 10.84.16.0/24 includs:  
         PC "Client 1" IP 10.84.16.10  
@@ -45,7 +45,7 @@ Ping statistics for 10.84.16.100:
     Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),  
 Approximate round trip times in milli-seconds:  
     Minimum = 0ms, Maximum = 0ms, Average = 0ms  
-[image 2](https://github.com/terra144481/DevOps_online_Odessa_2022Q1Q2/blob/751317483b92f6762c4f64bf42f7be743395a5b8/m3/task3.1/images/client1%20cmd.png)
+![image 2](https://github.com/terra144481/DevOps_online_Odessa_2022Q1Q2/blob/751317483b92f6762c4f64bf42f7be743395a5b8/m3/task3.1/images/client1%20cmd.png)
 
 **3. LAN Data Center. Go to command line Web Server 1**  
 - ```C:\>ping 10.16.84.150```  
@@ -75,8 +75,8 @@ Ping statistics for 10.16.84.100:
     Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),  
 Approximate round trip times in milli-seconds:  
     Minimum = 0ms, Maximum = 5ms, Average = 2ms  
-    
-[image 3](https://github.com/terra144481/DevOps_online_Odessa_2022Q1Q2/blob/751317483b92f6762c4f64bf42f7be743395a5b8/m3/task3.1/images/webserver1%20cmd.png)
+
+![image 3](https://github.com/terra144481/DevOps_online_Odessa_2022Q1Q2/blob/751317483b92f6762c4f64bf42f7be743395a5b8/m3/task3.1/images/webserver1%20cmd.png)
 
 **4. LAN "Home Office" Go to command line "Client 3"**  
 - ```C:\>ping 192.168.0.1```  
@@ -92,7 +92,5 @@ Ping statistics for 192.168.0.1:
     Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),  
 Approximate round trip times in milli-seconds:  
     Minimum = 6ms, Maximum = 47ms, Average = 23ms    
-    
-[image 4](https://github.com/terra144481/DevOps_online_Odessa_2022Q1Q2/blob/751317483b92f6762c4f64bf42f7be743395a5b8/m3/task3.1/images/client3%20cmd.png)  
-    
-    
+
+![image 4](https://github.com/terra144481/DevOps_online_Odessa_2022Q1Q2/blob/751317483b92f6762c4f64bf42f7be743395a5b8/m3/task3.1/images/client3%20cmd.png)  
