@@ -22,16 +22,16 @@ UUID: c53479f8-ef4c-4725-8ded-aac067f3c3f0
 Machine has been successfully cloned as "vm1 Clone"
 
 **4. Create a group of two VM: VM1, VM2.**  
-vms group.png
+![vms group.png](https://github.com/terra144481/DevOps_online_Odessa_2022Q1Q2/blob/8d8f839376085f85613bf5514843d290bcd2fb87/m2/task2.1/images/vms%20group.png)
 
 **5. For VM1, changing its state, take several different snapshots**  
 ```c:\Program Files\Oracle\VirtualBox>VBoxManage snapshot vm1 take mysnappp```  
 0%...10%...20%...30%...40%...50%...60%...70%...80%...90%...100%
 Snapshot taken.   UUID: 48bf7677-b112-4dec-b16e-7a47daab3c79  
-state snapshot.png
+![state snapshot.png](https://github.com/terra144481/DevOps_online_Odessa_2022Q1Q2/blob/8d8f839376085f85613bf5514843d290bcd2fb87/m2/task2.1/images/state%20snapshot.png)
 
-**6. Export, import VM1 to *.ova file.**  
-ova file.png
+**6. Export, import VM1 to .ova file.**  
+![ova file.png](https://github.com/terra144481/DevOps_online_Odessa_2022Q1Q2/blob/8d8f839376085f85613bf5514843d290bcd2fb87/m2/task2.1/images/ova%20file.png)
 
 **7. Configuration of virtual machines**  
 ```C:\Program Files\Oracle>ssh lovkin@localhost -p 2222```  
@@ -43,12 +43,12 @@ lovkin@localhost's password:
 Welcome to Ubuntu 20.04.3 LTS (GNU/Linux 5.4.0-99-generic x86_64)  
 
 **8. Shared folder to exchange data between the virtual machine**  
-share folder.jpg  
-share.png  
+![share folder.jpg](https://github.com/terra144481/DevOps_online_Odessa_2022Q1Q2/blob/8d8f839376085f85613bf5514843d290bcd2fb87/m2/task2.1/images/share%20folder.jpg)  
+![share.png](https://github.com/terra144481/DevOps_online_Odessa_2022Q1Q2/blob/8d8f839376085f85613bf5514843d290bcd2fb87/m2/task2.1/images/share.png)  
 
 **9. Configure different network modes for VM1, VM2.**  
-nat.jpg  
-bridge.jpg  
+![nat.jpg](https://github.com/terra144481/DevOps_online_Odessa_2022Q1Q2/blob/8d8f839376085f85613bf5514843d290bcd2fb87/m2/task2.1/images/nat.jpg)  
+![bridge.jpg](https://github.com/terra144481/DevOps_online_Odessa_2022Q1Q2/blob/8d8f839376085f85613bf5514843d290bcd2fb87/m2/task2.1/images/bridge.jpg)  
 
 **10. Work with CLI through VBoxManage**  
 list  vms  
