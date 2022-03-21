@@ -14,8 +14,8 @@
 ![5_dhcp_home_router.png](https://github.com/terra144481/DevOps_online_Odessa_2022Q1Q2/blob/05cbb05df5627e9fe789f9fa1d616bf5082d1bf6/m3/task3.4/images/5_dhcp_home_router.png)
 
 ![6_dhcp_client3.png](https://github.com/terra144481/DevOps_online_Odessa_2022Q1Q2/blob/05cbb05df5627e9fe789f9fa1d616bf5082d1bf6/m3/task3.4/images/6_dhcp_client3.png)  
-**3. Налаштування і перевірка роботи DNS сервісу. Призначено Web Server1 та
-Web Server2 доменні імена domain1.com та domain2.com відповідно.**
+**3. Налаштування і перевірка роботи DNS сервісу. Призначено Web Server1 та Web Server2 доменні імена domain1.com та domain2.com відповідно.**  
+
 ![7_add_dns.png](https://github.com/terra144481/DevOps_online_Odessa_2022Q1Q2/blob/05cbb05df5627e9fe789f9fa1d616bf5082d1bf6/m3/task3.4/images/7_add_dns.png)
 
 **4. Додано до налаштувань DHCP серверів адресу DNS сервера та оновлено
