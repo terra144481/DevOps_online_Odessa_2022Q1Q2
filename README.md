@@ -11,5 +11,6 @@
 ## [task3.1](https://github.com/terra144481/DevOps_online_Odessa_2022Q1Q2/tree/main/m3/task3.1)
 ## [task3.2](https://github.com/terra144481/DevOps_online_Odessa_2022Q1Q2/tree/main/m3/task3.2)
 ## [task3.3](https://github.com/terra144481/DevOps_online_Odessa_2022Q1Q2/tree/main/m3/task3.3)
+## [task3.4](https://github.com/terra144481/DevOps_online_Odessa_2022Q1Q2/tree/main/m3/task3.4)
 ***
 ## module 4
