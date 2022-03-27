@@ -14,9 +14,9 @@ root@ip-172-31-81-205:/home/ubuntu# sudo cat /etc/passwd
 root:x:0:0:root:/root:/bin/bash
 ubuntu:x:1000:1000:Ubuntu:/home/ubuntu:/bin/bash
 ```
-/etc/passwd - User account information.
-/etc/shadow - Secure user account information.
-/etc/pam.d/passwd- PAM configuration for passwd.
+/etc/passwd - User account information.  
+/etc/shadow - Secure user account information.  
+/etc/pam.d/passwd- PAM configuration for passwd.  
 
 **3. Determine the users registered in the system, as well as what commands they
 execute. What additional information can be gleaned from the command execution?**
@@ -46,11 +46,11 @@ Enter the new value, or press ENTER for the default
         Home Phone []: 3249-2349
         Other []:
   ```
-  **5. Become familiar with the Linux help system and the man and info commands.**
-  ```ubuntu@ip-172-31-81-205:~$ man passwd```
-  ```ubuntu@ip-172-31-81-205:~$ info passwd```
+  **5. Become familiar with the Linux help system and the man and info commands.**  
+  ```ubuntu@ip-172-31-81-205:~$ man passwd```  
+  ```ubuntu@ip-172-31-81-205:~$ info passwd```  
 Get help on the previously discussed commands, define and describe any two keys
-for these commands. Give examples.
+for these commands. Give examples.  
 ```
 ubuntu@ip-172-31-81-205:~$ man -w
 /usr/local/man:/usr/local/share/man:/usr/share/man
@@ -58,9 +58,9 @@ ubuntu@ip-172-31-81-205:~$ man -V
 man 2.9.1
 ```
 **6. Explore the more and less commands using the help system. View the contents of
-files .bash* using commands.**
-```ubuntu@ip-172-31-81-205:~$ more .bash*```
-```ubuntu@ip-172-31-81-205:~$ less .bash*```
+files .bash* using commands.**  
+```ubuntu@ip-172-31-81-205:~$ more .bash*```  
+```ubuntu@ip-172-31-81-205:~$ less .bash*```  
 
 **7. Describe in plans that you are working on laboratory work 1. Tip: You should
 read the documentation for the finger command.**
