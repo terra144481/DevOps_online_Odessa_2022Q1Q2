@@ -1,6 +1,6 @@
 **task4.1**
 
-**1. Log in to the system as root (or sudo-er).**
+**1. Log in to the system as root (or sudo-er).**  
 ```ubuntu@ip-172-31-81-205:~$ sudo su or sudo```
 
 **2. Use the passwd command to change the password. Examine the basic parameters
