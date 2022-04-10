@@ -9,7 +9,7 @@
  - Zombie (Z)
 
 **2. Examine the pstree command. Make output (highlight) the chain (ancestors) of the current
-process.**
+process.**  
 ```ubuntu@ip-172-31-81-205:~$ pstree -ha```
 ```
 systemd
@@ -24,9 +24,9 @@ systemd
   │   └─7*[{amazon-ssm-agen}]
 ....
 ```
-**3. What is a proc file system?**
-Proc file system (procfs) is virtual file system created on fly when system boots and is dissolved at time of system shut down. It contains useful information about the processes that are currently running, it is regarded as control and information center for kernel.
-folder /proc
+**3. What is a proc file system?**  
+Proc file system (procfs) is virtual file system created on fly when system boots and is dissolved at time of system shut down. It contains useful information about the processes that are currently running, it is regarded as control and information center for kernel.  
+folder /proc  
 **4. Print information about the processor (its type, supported technologies, etc.).**
 
 ```ubuntu@ip-172-31-81-205:~$ less /proc/cpuinfo```
@@ -54,8 +54,8 @@ execution, the group owner of this process, etc.**
       3       2 root     -20 Thu Apr  7 13:52:05 2022       43:26 root
       4       2 root     -20 Thu Apr  7 13:52:05 2022       43:26 root
 ```
-**6. How to define kernel processes and user processes?**
-kernel process [...]. They are starts with OS.
+**6. How to define kernel processes and user processes?**  
+kernel process [...]. They are starts with OS.  
 
 **7. Print the list of processes to the terminal. Briefly describe the statuses of the processes.
 What condition are they in, or can they be arriving in?**
@@ -79,14 +79,14 @@ ubuntu@ip-172-31-81-205:~$ ps -u ubuntu
    2236 pts/0    00:00:00 ps
    ```
 
-**9. What utilities can be used to analyze existing running tasks (by analyzing the help for the ps command)?**
- pgrep, pstree, top, htop
+**9. What utilities can be used to analyze existing running tasks (by analyzing the help for the ps command)?**  
+ pgrep, pstree, top, htop  
 
-**10. What information does top command display?**
+**10. What information does top command display?**  
 Dinamic information about process.
 PID, User, CPu, Mem, etc.
 
-**11. Display the processes of the specific user using the top command.**
+**11. Display the processes of the specific user using the top command.**  
 ```ubuntu@ip-172-31-81-205:~$ top -u ubuntu```
 ```
 top - 15:24:11 up  3:36,  1 user,  load average: 0.00, 0.00, 0.00
@@ -103,18 +103,18 @@ MiB Swap:      0.0 total,      0.0 free,      0.0 used.    651.9 avail Mem
    2299 ubuntu    20   0   11020   3912   3332 R   0.0   0.4   0:00.04 top
 ```
 **12. What interactive commands can be used to control the top command? Give a couple of
-examples.**
-  k,r       Manipulate tasks: 'k' kill; 'r' renice
- u,U,o,O . Filter by: 'u'/'U' effective/any user; 'o'/'O' other criteria
+examples.**  
+k,r       Manipulate tasks: 'k' kill; 'r' renice
+ u,U,o,O . Filter by: 'u'/'U' effective/any user; 'o'/'O' other criteria    
  **13. Sort the contents of the processes window using various parameters (for example, the
-amount of processor time taken up, etc.)**
-y <>
-**14. Concept of priority, what commands are used to set priority?**
-nice, renice
-**15. Can I change the priority of a process using the top command? If so, how?**
-top r nice, renice
+amount of processor time taken up, etc.)**  
+y <>  
+**14. Concept of priority, what commands are used to set priority?**  
+nice, renice  
+**15. Can I change the priority of a process using the top command? If so, how?**  
+top r nice, renice  
 **16. Examine the kill command. How to send with the kill command process control signal? Give
-an example of commonly used signals.**
+an example of commonly used signals.**  
  ```
 PID to signal/kill [default pid = 3975] 4069
     PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
@@ -122,7 +122,7 @@ PID to signal/kill [default pid = 3975] 4069
    4069 ubuntu    20   0   11020   3860   3184 R   0.0   0.4   0:00.30 top
 ```
 **17. Commands jobs, fg, bg, nohup. What are they for? Use the sleep, yes command to
-demonstrate the process control mechanism with fg, bg.**
+demonstrate the process control mechanism with fg, bg.**  
 ``sleep 5 - stop ps 5 sec``
 ```
 [1]+  Exit 127                $ nice gzip < /dev/zero > /dev/null
@@ -163,11 +163,11 @@ ubuntu@ip-172-31-81-205:~$ jobs -l
 [3]+  2858 Running                 nice xz < /dev/zero > /dev/null &
 ```
 
-**Part2**
+**Part2**  
 **1. Check the implementability of the most frequently used OPENSSH commands in the MS
 Windows operating system. (Description of the expected result of the commands +screenshots:
-command – result should be presented)**
-a) ssh-copy-id username@remote_host
+command – result should be presented)**  
+a) ssh-copy-id username@remote_host  
 ```
  ssh-keygen
  ssh testpc@192.168.0.110
@@ -175,9 +175,7 @@ a) ssh-copy-id username@remote_host
  exit
  ssh testpc@192.168.0.110
 ```
-
-
-b) ``cat ~/.ssh/id_rsa.pub | ssh username@remote_host "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys"``
+b) ``cat ~/.ssh/id_rsa.pub | ssh username@remote_host "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys"``  
 ```
 mkdir ~/.ssh
 chmod 0700 ~/.ssh
@@ -186,17 +184,17 @@ chmod 0644 ~/.ssh/authorized_keys
 cat > .ssh/authorized_keys
 past id_rsa.pub ctrl+D
 ```
-c) ```ssh-copy-id -i ~/.ssh/id_rsa.pub user@host```
+c) ```ssh-copy-id -i ~/.ssh/id_rsa.pub user@host```  
 
 **2. Implement basic SSH settings to increase the security of the client-server connection (at
-least)**
-edit sshd_config, del pass auth.
-change ssh port on file 22 > 2233
-```testpc@ubuntu-VirtualBox:~$ sudo nano /etc/ssh/sshd_config```
+least)**  
+edit sshd_config, del pass auth.  
+change ssh port on file 22 > 2233  
+```testpc@ubuntu-VirtualBox:~$ sudo nano /etc/ssh/sshd_config```  
 
-```testpc@ubuntu-VirtualBox:~/.ssh$ ssh -p2233 testpc@192.168.0.109```
+```testpc@ubuntu-VirtualBox:~/.ssh$ ssh -p2233 testpc@192.168.0.109```  
 
-**3. List the options for choosing keys for encryption in SSH. Implement 3 of them.**
+**3. List the options for choosing keys for encryption in SSH. Implement 3 of them.**  
 ```
 ssh-keygen [-t dsa | ecdsa | ecdsa-sk | ed25519 | ed25519-sk | rsa]
 
@@ -222,10 +220,10 @@ Welcome to Ubuntu 20.04.3 LTS (GNU/Linux 5.13.0-39-generic x86_64)
 ```
 **images link**
 
-**5*. Intercept (capture) traffic (tcpdump, wireshark) while authorizing the remote client on the
-server using ssh, telnet, rlogin. Analyze the result.**
-For SSH I used command:
-sudo tcpdump -vv -i any -nn port 22 -w   dump_ssh.pcap
+**5. Intercept (capture) traffic (tcpdump, wireshark) while authorizing the remote client on the
+server using ssh, telnet, rlogin. Analyze the result.**  
+For SSH I used command:  
+sudo tcpdump -vv -i any -nn port 22 -w   dump_ssh.pcap  
 
-For Telnet I used command:
-sudo tcpdump -vv -i any -nn port 23 -w    dump_telnet.pcap
+For Telnet I used command:  
+sudo tcpdump -vv -i any -nn port 23 -w    dump_telnet.pcap  
