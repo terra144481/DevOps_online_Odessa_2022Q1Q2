@@ -218,7 +218,7 @@ Warning: Permanently added '[127.0.0.1]:2222' (ECDSA) to the list of known hosts
 testpc@127.0.0.1's password:
 Welcome to Ubuntu 20.04.3 LTS (GNU/Linux 5.13.0-39-generic x86_64)
 ```
-**images link**
+![images link](https://github.com/terra144481/DevOps_online_Odessa_2022Q1Q2/blob/12122c0f53d0c595c47d116f6c2419e69d3633bc/m4/task4.3/forward.png)
 
 **5. Intercept (capture) traffic (tcpdump, wireshark) while authorizing the remote client on the
 server using ssh, telnet, rlogin. Analyze the result.**  
