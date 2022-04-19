@@ -1,18 +1,18 @@
 **task5**
 
 **1. На Server_1 налаштувати статичні адреси на всіх інтерфейсах
-Server_1 – ОС Linux Ubuntu 20.**
-net1 - 192.168.0.1/24 (enp0s3) режим «Мережевий міст» Int1 -192.168.0.103
-net2 - 10.84.16.1/24 (enp0s8) режим «Внутрішня мережа» Int2
-net3 - 10.10.84.1/24 (enp0s9) режим «Внутрішня мережа» Int3
+Server_1 – ОС Linux Ubuntu 20.**  
+net1 - 192.168.0.1/24 (enp0s3) режим «Мережевий міст» Int1 -192.168.0.103  
+net2 - 10.84.16.1/24 (enp0s8) режим «Внутрішня мережа» Int2  
+net3 - 10.10.84.1/24 (enp0s9) режим «Внутрішня мережа» Int3  
 
-Client1:
-net2 - 10.84.16.2/24 (enp0s3) Int1 режим «Внутрішня мережа»
-net4 - 172.16.10.1/24 (enp0s8) Int2  режим «Внутрішня мережа»
+Client1:  
+net2 - 10.84.16.2/24 (enp0s3) Int1 режим «Внутрішня мережа»  
+net4 - 172.16.10.1/24 (enp0s8) Int2  режим «Внутрішня мережа»  
 
-Client2:
-net3 - 10.10.84.0/24 (enp0s3) Int1 режим «Внутрішня мережа»
-net4 - 172.16.10.2/24 (enp0s8) Int2  режим «Внутрішня мережа»
+Client2:  
+net3 - 10.10.84.0/24 (enp0s3) Int1 режим «Внутрішня мережа»  
+net4 - 172.16.10.2/24 (enp0s8) Int2  режим «Внутрішня мережа»  
 ```
 testpc@server1:~$ ls /sys/class/net
 enp0s3  enp0s8  enp0s9  lo
@@ -80,15 +80,16 @@ subnet 10.84.16.0 netmask 255.255.255.0 {
 range 10.84.16.2 10.84.16.50;
 option routers 10.84.16.254;
 option domain-name-servers 10.84.16.1, 8.8.8.8, 8.8.4.4;
-picture 1
+![picture 1](https://github.com/terra144481/DevOps_online_Odessa_2022Q1Q2/blob/e5c8b45ecadc93fb3fc2fcbbe3c98ae5ca943359/m5/task5/images/serv/1%20VirtualBox_serv1_14_04_2022_13_03_02_dhcpd.conf.png)
 ```
-``nano /etc/default/isc-dhcp-server `` добавить физические интерфейсы
+``nano /etc/default/isc-dhcp-server `` добавить физические интерфейсы  
 ``sudo systemctl restart isc-dhcp-server``
 
 ``sudo systemctl status isc-dhcp-server``
-![pic 2]()
+![pic 2](https://github.com/terra144481/DevOps_online_Odessa_2022Q1Q2/blob/e5c8b45ecadc93fb3fc2fcbbe3c98ae5ca943359/m5/task5/images/serv/2%20VirtualBox_serv1_14_04_2022_13_05_34_dhcp_status.png)
 
 ``sudo systemctl start isc-dhcp-server``
+![lease](https://github.com/terra144481/DevOps_online_Odessa_2022Q1Q2/blob/e5c8b45ecadc93fb3fc2fcbbe3c98ae5ca943359/m5/task5/images/serv/3%20VirtualBox_serv1_14_04_2022_13_07_35_lease.png)
 
 ``sudo systemctl stop isc-dhcp-server``
 
@@ -97,11 +98,11 @@ picture 1
 таким чином, щоб трафік з Client_2 до 172.17.26.1 проходив через Server_1, а до
 172.17.36.1 через Net4. Для перевірки використати traceroute**
 
-![2_VirtualBox_client1_15_04_2022_19_17_37_add lo]
-
-![5 VirtualBox_client1_16_04_2022_01_15_41add route]
-
-![6 VirtualBox_client1_16_04_2022_01_29_11 addrout]
+![2_VirtualBox_client1_15_04_2022_19_17_37_add lo](https://github.com/terra144481/DevOps_online_Odessa_2022Q1Q2/blob/e5c8b45ecadc93fb3fc2fcbbe3c98ae5ca943359/m5/task5/images/cl1/2_VirtualBox_client1_15_04_2022_19_17_37_add%20lo.png)  
+![3rout.png](https://github.com/terra144481/DevOps_online_Odessa_2022Q1Q2/blob/e5c8b45ecadc93fb3fc2fcbbe3c98ae5ca943359/m5/task5/images/cl1/3%20VirtualBox_client1_15_04_2022_19_56_49%20on%20rout.png)  
+![4](https://github.com/terra144481/DevOps_online_Odessa_2022Q1Q2/blob/e5c8b45ecadc93fb3fc2fcbbe3c98ae5ca943359/m5/task5/images/cl1/4%20VirtualBox_client1_16_04_2022_00_39_10_ping.png)
+![5 VirtualBox_client1_16_04_2022_01_15_41add route](https://github.com/terra144481/DevOps_online_Odessa_2022Q1Q2/blob/e5c8b45ecadc93fb3fc2fcbbe3c98ae5ca943359/m5/task5/images/cl1/5%20VirtualBox_client1_16_04_2022_01_15_41add%20route.png)
+![6 VirtualBox_client1_16_04_2022_01_29_11 addrout](https://github.com/terra144481/DevOps_online_Odessa_2022Q1Q2/blob/e5c8b45ecadc93fb3fc2fcbbe3c98ae5ca943359/m5/task5/images/cl1/6%20VirtualBox_client1_16_04_2022_01_29_11%20addrout.png)
 
 **5. Розрахувати спільну адресу та маску (summarizing) адрес 172.17.26.1 та
 172.17.36.1, при чому маска має бути максимально можливою.
@@ -110,18 +111,20 @@ picture 1
 маршрутом, якій має проходити через Server_1
 172.17.0.1/18**
 
-10101100.00010001.00011010.00000001 172.17.26.1
-10101100.00010001.00100100.00000001 172.17.36.1
-10101100.00010001.00111110.00000001 172.17.0.1/18
-
-![7 VirtualBox_client1_17_04_2022_12_15_51_add_172_17_0_0_18]()
+10101100.00010001.00011010.00000001 172.17.26.1  
+10101100.00010001.00100100.00000001 172.17.36.1  
+10101100.00010001.00111110.00000001 172.17.0.1/18  
+![6](https://github.com/terra144481/DevOps_online_Odessa_2022Q1Q2/blob/e5c8b45ecadc93fb3fc2fcbbe3c98ae5ca943359/m5/task5/images/cl1/6%20VirtualBox_client1_16_04_2022_01_29_11%20addrout.png)
+![7 VirtualBox_client1_17_04_2022_12_15_51_add_172_17_0_0_18](https://github.com/terra144481/DevOps_online_Odessa_2022Q1Q2/blob/e5c8b45ecadc93fb3fc2fcbbe3c98ae5ca943359/m5/task5/images/cl1/7%20VirtualBox_client1_17_04_2022_12_15_51_add_172_17_0_0_18.png)
+![8](https://github.com/terra144481/DevOps_online_Odessa_2022Q1Q2/blob/e5c8b45ecadc93fb3fc2fcbbe3c98ae5ca943359/m5/task5/images/serv/6%20VirtualBox_serv1_17_04_2022_11_51_12_add_sum_route_conf.png)
 
 **6. Налаштувати SSH сервіс таким чином, щоб Client_1 та Client_2 могли
 підключатись до Server_1 та один до одного.**
 
-![8 VirtualBox_client1_17_04_2022_12_23_08_ssh192_168_0_103]
-![9]()
-![10 VirtualBox_client1_17_04_2022_12_23_08_ssh172_16_10_2]()
+![8 VirtualBox_client1_17_04_2022_12_23_08_ssh192_168_0_103](https://github.com/terra144481/DevOps_online_Odessa_2022Q1Q2/blob/e5c8b45ecadc93fb3fc2fcbbe3c98ae5ca943359/m5/task5/images/cl1/8%20VirtualBox_client1_17_04_2022_12_23_08_ssh192_168_0_103.png)
+![9](https://github.com/terra144481/DevOps_online_Odessa_2022Q1Q2/blob/e5c8b45ecadc93fb3fc2fcbbe3c98ae5ca943359/m5/task5/images/cl1/9%20VirtualBox_client1_17_04_2022_12_23_08_ssh192_168_0_103.png)
+![10 VirtualBox_client1_17_04_2022_12_23_08_ssh172_16_10_2](https://github.com/terra144481/DevOps_online_Odessa_2022Q1Q2/blob/e5c8b45ecadc93fb3fc2fcbbe3c98ae5ca943359/m5/task5/images/cl1/10%20VirtualBox_client1_17_04_2022_12_23_08_ssh172_16_10_2.png)
+![11](https://github.com/terra144481/DevOps_online_Odessa_2022Q1Q2/blob/e5c8b45ecadc93fb3fc2fcbbe3c98ae5ca943359/m5/task5/images/serv/8_VirtualBox_serv1_17_04_2022_12_57_57_ssh10_84_16_2.png)
 
 **7. Налаштуйте на Server_1 firewall таким чином:
 • Дозволено підключатись через SSH з Client_1 та заборонено з Client_2
@@ -132,6 +135,11 @@ sudo ufw allow in on enp0s8 to any port 22
 sudo ufw dany in on enp0s9 to any port 80
 sudo ufw enable
 ```
+![123](https://github.com/terra144481/DevOps_online_Odessa_2022Q1Q2/blob/e5c8b45ecadc93fb3fc2fcbbe3c98ae5ca943359/m5/task5/images/serv/9%20VirtualBox_serv1_18_04_2022_02_22_26_add_firewall.png)
+![11](https://github.com/terra144481/DevOps_online_Odessa_2022Q1Q2/blob/e5c8b45ecadc93fb3fc2fcbbe3c98ae5ca943359/m5/task5/images/cl1/11%20VirtualBox_client1_18_04_2022_02_28_29_firewall_ssh_add_cl1.png)
+![12](https://github.com/terra144481/DevOps_online_Odessa_2022Q1Q2/blob/e5c8b45ecadc93fb3fc2fcbbe3c98ae5ca943359/m5/task5/images/cl1/12%20VirtualBox_client1_18_04_2022_15_38_36_inet.png)
+![858](https://github.com/terra144481/DevOps_online_Odessa_2022Q1Q2/blob/e5c8b45ecadc93fb3fc2fcbbe3c98ae5ca943359/m5/task5/images/cl2/2_VirtualBox_client2_18_04_2022_02_24_05_firewall_drop_ssh_cl2_ping8888.png)
+
 **8. Якщо в п.3 була налаштована маршрутизація для доступу Client_1 та Client_2 до
 мережі Інтернет – видалити відповідні записи. На Server_1 налаштувати NAT
 сервіс таким чином, щоб з Client_1 та Client_2 проходив ping в мережу Інтернет**
@@ -167,4 +175,4 @@ target     prot opt source               destination
 SNAT       all  --  10.84.16.0/24        anywhere             to:192.168.0.103
 SNAT       all  --  10.10.84.0/24        anywhere             to:192.168.0.103
 ```
-![12 VirtualBox_client1_18_04_2022_15_38_36_inet]()
+![12 VirtualBox_client1_18_04_2022_15_38_36_inet](https://github.com/terra144481/DevOps_online_Odessa_2022Q1Q2/blob/e5c8b45ecadc93fb3fc2fcbbe3c98ae5ca943359/m5/task5/images/cl1/12%20VirtualBox_client1_18_04_2022_15_38_36_inet.png)
