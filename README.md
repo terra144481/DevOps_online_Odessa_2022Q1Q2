@@ -20,3 +20,6 @@
 ***
 ## module 5
 ## [task5](https://github.com/terra144481/DevOps_online_Odessa_2022Q1Q2/tree/main/m5/task5)
+***
+## module 6
+## [task6](https://github.com/terra144481/DevOps_online_Odessa_2022Q1Q2/tree/main/m6/task6)
