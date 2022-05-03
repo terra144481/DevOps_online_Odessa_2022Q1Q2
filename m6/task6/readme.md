@@ -1,67 +1,76 @@
 **Task6**
 
-**A. Create a script that uses the following keys:**  
+**A. Create a script that uses the following keys:**
 1. When starting without parameters, it will display a list of possible keys and their description.
 2. The --all key displays the IP addresses and symbolic names of all hosts in the current subnet
 3. The --target key displays a list of open system TCP ports.
 The code that performs the functionality of each of the subtasks must be placed in a separate function
 
+ **1) Create file first.sh**
+``[ec2-user@ip-172-31-26-111 ~]$ nano first.sh``
+
 ```
 #!/bin/bash
-echo "This is scrypt using two keys: --all and --target."
-echo " Please using it.--all key displays the IP addresses and symbolic names of all hosts in the current subnet"
-echo " --target key displays a list of open system TCP ports"
+if [ -z $1 ] #значение параметра равно 0
+then
+        echo "This is scrypt using two keys: --all and --target."
+        echo "--all key displays the IP addresses and symbolic names of all hosts in the current subnet"
+        echo "--target key displays a list of open system TCP ports"
+else
 
-while [ -n "$1" ]
+while [ -n "$1" ] #значение параметра больше 0
 do
 case "$1" in
-           --all) echo "Name of host and IP addresses :"
-                hostnamectl | grep -i hostname
-                ip addr | grep -i inet;;
+           --all) echo " Show IP addresses and symbolic names of all hosts in the current subnet :"
+#               hostnamectl | grep -i hostname
+#               ip addr | grep -i inet
+                arp -n;;
         --target) echo "Open system TCP ports:"
                 netstat -lt;;
-               *) echo "Enter somting key!"
+               *) echo "Please choose something key!"
                 echo "--all key displays the IP addresses and symbolic names of all hosts in the current subnet"
                 echo "--target key displays a list of open system TCP ports";;
 esac
 shift
 done
+fi
 ```
+**2) chmod a+x name**
+``[ec2-user@ip-172-31-26-111 ~]$ chmod a+x first.sh``  
 
+**3) Run scrypt**
 ```
 [ec2-user@ip-172-31-26-111 ~]$ ./first.sh
 This is scrypt using two keys: --all and --target.
- Please using it.--all key displays the IP addresses and symbolic names of all hosts in the current subnet
- --target key displays a list of open system TCP ports
+--all key displays the IP addresses and symbolic names of all hosts in the current subnet
+--target key displays a list of open system TCP ports
 ```
 
 ```
 [ec2-user@ip-172-31-26-111 ~]$ ./first.sh --all
-This is scrypt using two keys: --all and --target.
- Please using it.--all key displays the IP addresses and symbolic names of all hosts in the current subnet
- --target key displays a list of open system TCP ports
-Name of host and IP addresses :
-   Static hostname: ip-172-31-26-111.ec2.internal
-    inet 127.0.0.1/8 scope host lo
-    inet6 ::1/128 scope host
-    inet 172.31.26.111/20 brd 172.31.31.255 scope global dynamic eth0
-    inet6 fe80::819:e7ff:fe16:b45b/64 scope link
+ Show IP addresses and symbolic names of all hosts in the current subnet :
+Address                  HWtype  HWaddress           Flags Mask            Iface
+172.31.16.1              ether   0a:2d:c6:4b:4c:3d   C                     eth0
 ```
+
 ```
 [ec2-user@ip-172-31-26-111 ~]$ ./first.sh --target
-This is scrypt using two keys: --all and --target.
- Please using it.--all key displays the IP addresses and symbolic names of all hosts in the current subnet
- --target key displays a list of open system TCP ports
 Open system TCP ports:
 Active Internet connections (only servers)
 Proto Recv-Q Send-Q Local Address           Foreign Address         State
+tcp        0      0 0.0.0.0:ssh             0.0.0.0:*               LISTEN
 tcp        0      0 localhost:smtp          0.0.0.0:*               LISTEN
 tcp        0      0 0.0.0.0:sunrpc          0.0.0.0:*               LISTEN
-tcp        0      0 0.0.0.0:ssh             0.0.0.0:*               LISTEN
-tcp6       0      0 [::]:sunrpc             [::]:*                  LISTEN
 tcp6       0      0 [::]:ssh                [::]:*                  LISTEN
+tcp6       0      0 [::]:sunrpc             [::]:*                  LISTEN
 ```
 
+```
+[ec2-user@ip-172-31-26-111 ~]$ ./first.sh --some
+Please choose something key!
+--all key displays the IP addresses and symbolic names of all hosts in the current subnet
+--target key displays a list of open system TCP ports
+```
 **B. Using Apache log example create a script to answer the following questions:**
 1. From which ip were the most requests?
 ```
