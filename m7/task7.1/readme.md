@@ -25,7 +25,7 @@ mysql> show databases;
 4 rows in set (0.01 sec)
 ```
 
-#create DB
+#create DB  
 ``mysql> CREATE DATABASE exchange_test;``
 ```
 mysql> show databases;
@@ -104,7 +104,7 @@ mysql> show tables;
 +-------------------------+
 3 rows in set (0.00 sec)
 ```
-**#add info into tables**
+**#add info into tables**  
 ``mysql> INSERT INTO usr (name, surname, email)
     -> VALUES ('Ivan', 'Ivanov', 'ivanov@test.ua');``
 ```
@@ -147,7 +147,7 @@ mysql> select * from cryptocurrency;
 3 rows in set (0.00 sec)
 ```
 
-**Construct and execute SELECT operator with WHERE, GROUP BY and ORDER BY**
+**Construct and execute SELECT operator with WHERE, GROUP BY and ORDER BY**  
 ``
 mysql> select * from usr where name='Sidor';
 ``
@@ -160,7 +160,7 @@ mysql> select * from usr where name='Sidor';
 1 row in set (0.00 sec)
 ```
 
-**#инструкция SQL перечисляет число юзеров с одинаковыми именами**
+**#инструкция SQL перечисляет число юзеров с одинаковыми именами**  
 ``
 mysql> SELECT COUNT(email), name FROM usr GROUP BY name;``
 ```
@@ -174,7 +174,7 @@ mysql> SELECT COUNT(email), name FROM usr GROUP BY name;``
 3 rows in set (0.00 sec)
 ```
 
-**#инструкция SQL перечисляет число юзеров с одинаковыми именами, отсортированных с высоким до низкого:**
+**#инструкция SQL перечисляет число юзеров с одинаковыми именами, отсортированных с высоким до низкого:**  
 ``mysql> SELECT COUNT(idusr), name FROM usr GROUP BY name ORDER BY COUNT(idusr) DESC;``
 ```
 +--------------+-------+
@@ -187,15 +187,15 @@ mysql> SELECT COUNT(email), name FROM usr GROUP BY name;``
 3 rows in set (0.00 sec)
 ```
 
-**7. Execute other different SQL queries DDL, DML, DCL.**
+**7. Execute other different SQL queries DDL, DML, DCL.**  
 
 ``mysql> DELETE FROM usr WHERE email='info@test.com';
 Query OK, 1 row affected (0.00 sec)``
 
 **8) Create a database of new users with different privileges. Connect to the
 database as a new user and verify that the privileges allow or deny certain
-actions.**
-**#create new user**
+actions.**  
+**#create new user**  
 ```
 mysql> CREATE USER user@localhost IDENTIFIED BY 'abcd';
 
@@ -204,7 +204,7 @@ Query OK, 0 rows affected (0.02 sec)
 mysql> CREATE USER 'user2'@'localhost' IDENTIFIED BY 'abcd';
 Query OK, 0 rows affected (0.01 sec)
 ```
-**#просмотр прав**
+**#просмотр прав**  
 ```
 mysql> SHOW GRANTS FOR user@localhost;``
 
@@ -228,7 +228,7 @@ mysql> show databases;
 +--------------------+
 1 row in set (0.00 sec)
 ```
-**#предоставление прав SELECT `exchange_test`.`usr`**
+**#предоставление прав SELECT `exchange_test`.`usr`**  
 ```
 mysql> GRANT SELECT ON usr TO user@localhost;
 Query OK, 0 rows affected (0.00 sec)
@@ -243,7 +243,7 @@ mysql> SHOW GRANTS FOR user@localhost;
 2 rows in set (0.00 sec)
 ```
 
-**#проверим работу SELECT.**
+**#проверим работу SELECT.**  
 ```
 mysql> SELECT * FROM usr;
 +-------+-------+---------+-----------------+
@@ -256,7 +256,7 @@ mysql> SELECT * FROM usr;
 3 rows in set (0.00 sec)
 ```
 
-**# попытаемся добавить записи  в таблицу;**
+**# попытаемся добавить записи  в таблицу;**  
 ```
 mysql> INSERT INTO usr (name, surname, email) VALUES ('new', 'new', 'new@test.ua');
 ERROR 1142 (42000): INSERT command denied to user 'user'@'localhost' for table 'usr'
@@ -292,23 +292,23 @@ mysql> SELECT * FROM usr;
 +-------+-------+---------+-----------------+
 4 rows in set (0.00 sec)
 ```
-**#list all users SQL**
+**#list all users SQL**  
 ``mysql> SELECT User, Host FROM mysql.user;``
 
-**#delete privilegue**
+**#delete privilegue**  
 ```
 mysql> REVOKE SELECT ON usr FROM user@localhost;
 Query OK, 0 rows affected (0.01 sec)
 ```
-**#DELETE user**
+**#DELETE user**  
 ```
 mysql> DROP user user@localhost;
 Query OK, 0 rows affected (0.01 sec)
 ```
 
-**Part2**
+**Part2**  
 
-**10.Make backup of your database.**
+**10.Make backup of your database.**  
 **#dumpsql**
 ```
 ubuntu@ip-172-31-26-144:~/backupSQL$ sudo mysqldump -u root -p exchange_test > dump.sql
