@@ -24,7 +24,7 @@ mysql> show databases;
 +--------------------+
 4 rows in set (0.01 sec)
 ```
-![create schema]()
+![create schema](https://github.com/terra144481/DevOps_online_Odessa_2022Q1Q2/blob/c510b6b84bcbb795236aa7fdd611599c146b544c/m7/task7.1/image/image_schema.png)
 
 #create DB
 ``mysql> CREATE DATABASE exchange_test;``
@@ -322,8 +322,8 @@ dump.sql
 ```
 sudo mysql -u root -p exchange_test < dump.sql
 ```
-![create schema]()
-![create schema]()  
+![create sc](https://github.com/terra144481/DevOps_online_Odessa_2022Q1Q2/blob/c510b6b84bcbb795236aa7fdd611599c146b544c/m7/task7.1/image/FireShot%20Capture%20071%20-%20RDS%20Management%20Console%20-%20eu-central-1.console.aws.amazon.com.png)
+![create schema](https://github.com/terra144481/DevOps_online_Odessa_2022Q1Q2/blob/c510b6b84bcbb795236aa7fdd611599c146b544c/m7/task7.1/image/FireShot%20Capture%20070%20-%20EC2%20Management%20Console%20-%20eu-central-1.console.aws.amazon.com.png)  
 **13.Transfer your local database to RDS AWS. Connect to your database.**
 ```
 [ec2-user@ip-172-30-2-118 ~]$ mysql -h database.c8lldljnaiou.eu-central-1.rds.amazonaws.com -P 3306 -u admin -p
