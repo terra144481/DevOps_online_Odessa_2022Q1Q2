@@ -23,7 +23,7 @@ print(list, type (list))
 tuple = tuple (list)
 print (tuple, type(tuple))
 ```
-![2.png](https://github.com/terra144481/DevOps_online_Odessa_2022Q1Q2/blob/90e5f80f4e184f8c6dc4e6ace5ce0277f5fada12/m8/task8.1/images/2.png)
+![2.png](https://github.com/terra144481/DevOps_online_Odessa_2022Q1Q2/blob/6d7c3b1b8016a3abe806bdd77232578d03afa1d2/m8/task8.1/images/2.png)
 **3. Write python program, which will ask file name. File should be read, and only even
 lines should be shown.**
 ```
