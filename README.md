@@ -26,3 +26,6 @@
 ***
 ## module 7 Database Administration
 ## [task7](https://github.com/terra144481/DevOps_online_Odessa_2022Q1Q2/tree/main/m7/task7.1)
+***
+## module 8 Python Intro
+## [task8](https://github.com/terra144481/DevOps_online_Odessa_2022Q1Q2/tree/main/m8/task8.1)
